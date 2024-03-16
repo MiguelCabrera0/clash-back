@@ -30,7 +30,7 @@ app.post('/login', (req, res) => {
 
 app.post('/clashPlayerInfo', async (req, res) => {
     const { user } = req.body;
-    const x = await fetch(`https://api.clashofclans.com/v1/players/${user.replaceAll('#', '%23')}`, {
+    const x = await fetch(`https://api.clashofclans.com/v1/players/${user?.replaceAll('#', '%23')}`, {
         headers: {
             Authorization,
         },
